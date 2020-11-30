@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./";
+import Home from "./Home";
 import { Route } from "react-router-dom";
 import AccountsRoutes from "./accounts";
 
@@ -7,8 +7,8 @@ import AccountsRoutes from "./accounts";
 export default function Root(){
     return(
         <div>
-            <Route exact path="/home" component={Home} />
-            {/* <Route path="/accounts" component={AccountsRoutes} /> */}
+            <Route exact path="/" component={Home} />
+            <Route path="/accounts" component={AccountsRoutes} />
         </div>
     );
 }
