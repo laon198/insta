@@ -1,0 +1,23 @@
+.app{
+    #header{
+        background-color: white;
+        border-bottom: 1px solid black;
+    }
+
+    #contents{
+        background-color: yellow;
+        height:550px;
+    }
+
+    #footer{
+        background-color: purple;
+        height:150px;
+    }
+
+    .container{
+        background-color: white;
+        width:940px;
+        margin: 0 auto;
+    }
+
+}
