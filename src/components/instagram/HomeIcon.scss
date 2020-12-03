@@ -1,0 +1,13 @@
+.homeicon{
+  display: flex;
+  justify-content: space-between;
+  .icon{
+    font-size: 25px;
+    color: black;
+  }
+  .profile{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
+}

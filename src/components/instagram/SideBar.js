@@ -1,8 +1,13 @@
 import React from 'react';
+import './SideBar.scss';
 
 function SideBar(){
 
-  return <div>hhhhhh</div>;
+  return(
+    <div className="sidebar">
+			sidebar
+		</div>
+  );
 }
 
 export default SideBar ;

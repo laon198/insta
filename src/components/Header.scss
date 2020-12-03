@@ -1,0 +1,12 @@
+.header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:7px 0 3px 0;
+  .title{
+    margin: 0;
+  }
+  .nav{
+    width: 200px;
+  }
+}

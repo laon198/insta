@@ -1,12 +1,14 @@
 .app{
+    
     #header{
         background-color: white;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #dbdbdb ;
     }
 
     #contents{
-        background-color: yellow;
-        height:550px;
+				background-color: #fafafa;
+				
+        
     }
 
     #footer{
@@ -15,9 +17,10 @@
     }
 
     .container{
-        background-color: white;
-        width:940px;
+        // background-color: pink;
+        width:950px;
         margin: 0 auto;
+        height:100%; 
     }
 
 }

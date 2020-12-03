@@ -8,9 +8,9 @@ export default function Home(){
     return(
         <div>
             <AppLayout>
-                <HomeLayout SideBar={SideBar}>    
+                <HomeLayout SideBar={<SideBar/>}>    
                     <PostList/>
-
+                    
                 </HomeLayout>
             </AppLayout>
         </div>
