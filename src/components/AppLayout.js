@@ -1,6 +1,7 @@
 import React from 'react';
 import "./AppLayout.scss";
 import Header from './Header';
+import Footer from './instagram/Footer';
 
 function AppLayout({children}){
 
@@ -21,7 +22,7 @@ function AppLayout({children}){
         <div id="footer">
             <div className="container">
                 <div className="footer">
-                    dsfdf
+                    <Footer></Footer>
                 </div>
             </div>
         </div>

@@ -2,12 +2,17 @@
     
     #header{
         background-color: white;
-        border-bottom: 1px solid #dbdbdb ;
+				border-bottom: 1px solid #dbdbdb ;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index:9999;
     }
 
     #contents{
 				background-color: #fafafa;
-				
+				padding-top: 50px;
         
     }
 
@@ -18,7 +23,7 @@
 
     .container{
         // background-color: pink;
-        width:950px;
+        width:970px;
         margin: 0 auto;
         height:100%; 
     }
