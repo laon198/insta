@@ -59,9 +59,10 @@ function PostCard(){
 						<p className="ptag">유트브 볼 때마다 감탄 ㅠ</p>
 						<a className="date" href="#">4일 전</a>
 				</div>
-				<div className="input">
+				<form className="input">
 					<input className="comment_input" type="text" placeholder="댓글 달기..."/>
-				</div>
+					<input className="comment_submit" value="게시" type="submit"/>
+				</form>
 			</div>
 			{/* <!-- // list --> */}
 		</div>
