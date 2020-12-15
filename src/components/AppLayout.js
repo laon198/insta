@@ -1,32 +1,28 @@
-import React from 'react';
-import "./AppLayout.scss";
-import Header from './Header';
-import Footer from './instagram/Footer';
+import React from "react";
+import Header from "./Header";
+import Footer from "./instagram/Footer";
+import styles from "./AppLayout.module.scss";
 
-function AppLayout({children}){
-
+function AppLayout({ children }) {
   return (
-    <div className="app">
-        <div id="header">
-            <div className="container">
-                <Header>
-                    
-                </Header>
-            </div>
+    <div className={styles.app}>
+      <div id={styles.header}>
+        <div className={styles.container}>
+          <Header></Header>
         </div>
-        <div id="contents">
-            <div className="container">
-                {children}
-            </div>
+      </div>
+      <div id={styles.contents}>
+        <div className={styles.container}>{children}</div>
+      </div>
+      <div id={styles.footer}>
+        <div className={styles.container}>
+          <div className={styles.footer}>
+            <Footer></Footer>
+          </div>
         </div>
-        <div id="footer">
-            <div className="container">
-                <div className="footer">
-                    <Footer></Footer>
-                </div>
-            </div>
-        </div>
-    </div>);
+      </div>
+    </div>
+  );
 }
 
-export default AppLayout ;
+export default AppLayout;

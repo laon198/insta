@@ -1,7 +1,7 @@
 .sidebar{
 
-	position: fixed;
-	right: 25.2%;
+	
+
 	padding:23px 0 23px 1.5%;
 	// border:1px solid #dbdbdb;
 	width: 315px;
@@ -13,12 +13,16 @@
 	.myprofile{
 		display:flex;
 		.myprofimg{
+			padding:5px;
+			padding-left: 0px;
 			display: flex;
 			flex-grow:1;
+		
 		}
 		.myprofimg img{
 			border-radius:50%;
-			width: 57px;
+			width: 55px;
+			
 			
 		}
 		.myprofname{
@@ -82,7 +86,7 @@
 			.friendimg{
 				flex-grow:1;
 				img{
-					width: 30px;
+					width: 33px;
 					border-radius:50%;
 				}
 				

@@ -8,13 +8,6 @@
 		
 	}
 
-	.story{
-		border:1px solid #bdbdbd  ;
-		height:117px;
-		background: white;
-		
-	}
-
 	.list{
 		position: relative;
 		background: white;
@@ -27,6 +20,9 @@
 		box-sizing:border-box;
 		.top{
 			padding:0 14px 8px 14px;
+			.avatar{
+				font-size: 35px;
+			}
 			img{
 				width: 30px;
 				height: 30px;
@@ -36,7 +32,7 @@
 			.nickname{
 				position: absolute;
 				left:62px;
-				top: 18px;
+				top: 25px;
 				font-size: 13px;
 				font-weight: 600;
 			}
@@ -44,7 +40,7 @@
 				font-size: 27px;
 				position: absolute;
 				right: 20px;
-				top: 0;
+				top: 10px;
 			}
 		}
 		
@@ -82,11 +78,18 @@
 				font-weight: 600;
 				padding-bottom: 10px;
 			}
-			.nickname{
-				font-size: 13px;
-				font-weight: 600;
-				padding-bottom: 5px;
+			.mycaption{
+				padding-bottom: 9px;
+				.nickname{
+					font-size: 13px;
+					font-weight: 600;
+					display: inline;
+				}
+				.caption{
+					display: inline;
+				}
 			}
+			
 			.com_more{
 				color:#8E8E8E;
 				font-size: 15px;
@@ -106,7 +109,8 @@
 			}
 			.date{
 				padding-top:10px;
-				font-size: 5px;
+				padding-bottom:5px;
+				font-size: 10px;
 				color:#8E8E8E;
 				
 			}

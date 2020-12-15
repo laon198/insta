@@ -1,0 +1,30 @@
+.menu_items{width: 235px; height: 37px;}
+.logout{width: 235px; height: 37px;}
+
+.header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:13px 0 3px 0;
+  .title{
+    margin: 0;
+  }
+  .nav{
+		width: 22%;
+		
+		.homeicon{
+	  	display: flex;
+			justify-content: space-between;
+			
+	  	.icon{
+	    	font-size: 25px;
+	    	color: black;
+	  	}
+	  	.profile{
+		    width: 28px;
+		    height: 28px;
+		    border-radius: 50%;
+	  	}
+		}
+  }
+}
