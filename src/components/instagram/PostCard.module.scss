@@ -1,0 +1,155 @@
+.postcard{
+	width:63%;
+	margin-top: 33px;
+	
+	a{
+		color:black;
+		text-decoration: none;
+		
+	}
+
+	.list{
+		position: relative;
+		background: white;
+		position: relative;
+		padding: 16px 0px 0  0;
+		margin:27px 0;
+		border:1px solid #bdbdbd;
+	
+		// height:1050px;
+		box-sizing:border-box;
+		.top{
+			padding:0 14px 8px 14px;
+			.avatar{
+				font-size: 35px;
+			}
+			img{
+				width: 30px;
+				height: 30px;
+				border-radius:50%;
+			}
+			
+			.nickname{
+				position: absolute;
+				left:62px;
+				top: 25px;
+				font-size: 13px;
+				font-weight: 600;
+			}
+			.more{
+				font-size: 27px;
+				position: absolute;
+				right: 20px;
+				top: 10px;
+			}
+		}
+		
+		.img{
+			img{
+				width: 100%;
+			}
+		}
+		.posticon{
+			display:flex;
+			padding:7px 14px 6px 14px;
+			.posticon_left{
+				font-size: 24px;
+				display:inline-flex;
+				justify-content: space-between;
+				flex-grow: 0.7;
+			}
+			.posticon_right{
+				display: flex;
+				font-size: 24px;
+				justify-content: flex-end;
+				flex-grow:9.3;
+			}
+		}
+
+		.comment{
+			padding:0px 14px 5px 14px;
+			a{
+				
+				display: block;
+				
+			}
+			.likenum{
+				font-size: 14px;
+				font-weight: 600;
+				padding-bottom: 10px;
+			}
+			.mycaption{
+				padding-bottom: 9px;
+				.nickname{
+					font-size: 13px;
+					font-weight: 600;
+					display: inline;
+				}
+				.caption{
+					display: inline;
+				}
+			}
+			
+			.com_more{
+				color:#8E8E8E;
+				font-size: 15px;
+				padding-bottom: 4px;
+			}
+			.com_writer{
+				font-size: 13px;
+				font-weight: 600;
+				display: inline-block;
+				padding:0 3px 2px 0px;
+				
+			}
+			.ptag{
+				font-size: 14px;
+				display: inline-block;
+				margin:0 0 8px 0;
+			}
+			.date{
+				padding-top:10px;
+				padding-bottom:5px;
+				font-size: 10px;
+				color:#8E8E8E;
+				
+			}
+		}
+
+		.input{
+			display:flex;
+			width: 100%;
+			height: 58px;
+			input{
+				clear:none;
+				float:none;
+				box-sizing:border-box;
+				border:0px none;
+				border-top: 1px solid #dbdbdb;
+				padding:0 0 0 10px;
+			}
+			input:focus{
+				outline:none;
+			}
+			input::placeholder{
+				font-size: 15px;
+			}
+			.comment_input{
+				flex-grow:9;
+			}
+			.comment_submit{
+				flex-grow:1;
+				
+				border:0;
+				border-top: 1px solid #dbdbdb;
+				padding:0;
+				line-height: 58px;
+				display:inline;
+				color:#0095f6;
+				font-weight: bold;
+				background: none;
+			}
+		}
+	}
+
+}
