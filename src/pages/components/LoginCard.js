@@ -7,17 +7,41 @@ import Instagram from "../components/Instagram";
 import AppDownBox from "./AppDownBox";
 import SubmitButton from "./SubmitButton";
 import Axios from "axios";
+import { setToken, useAppContext } from "../../store";
+import { useHistory, useLocation } from "react-router-dom";
 
 function LoginCard() {
+  const { dispatch } = useAppContext();
+  const location = useLocation();
+  const history = useHistory();
   const [inputs, setInputs] = useState({ email: "", password: "" });
+  // const [jwtToken, setjwtToken] = useLocalStorage("jwtToken", "");
+  const { from: loginRedirectUrl } = location.state || {
+    from: { pathanme: "/" },
+  };
+  // console.log("loaded jwtToken : ", jwtToken);
 
   const onSubmit = (e) => {
-    e.preventDefault();
-    const { email, password } = inputs;
-    const data = { email, password };
-    Axios.post("http://192.168.0.8:8080/accounts/login/", inputs)
-      .then((response) => console.log(response))
-      .catch((error) => console.error(error));
+    async function fn() {
+      e.preventDefault();
+      const { email, password } = inputs;
+      const data = { email, password };
+      try {
+        const response = await Axios.post(
+          "http://192.168.0.8:8080/accounts/login/",
+          data
+        );
+        const {
+          data: { token: jwtToken },
+        } = response;
+        dispatch(setToken(jwtToken));
+        // setjwtToken(jwtToken);
+        history.push(loginRedirectUrl);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fn();
   };
 
   const onChange = (e) => {
@@ -54,7 +78,7 @@ function LoginCard() {
             <span></span>
             <span>Facebook으로 로그인</span>
           </button>
-          <a href="#" className={Style.pwReset}>
+          <a href="http://www.naver.com" className={Style.pwReset}>
             비밀번호를 잊으셨나요?
           </a>
         </form>
@@ -63,7 +87,7 @@ function LoginCard() {
         <div>
           <p className={Style.joinAsk}>
             계정이 없으신가요?
-            <a href="#" className={Style.joinLink}>
+            <a href="http://www.naver.com" className={Style.joinLink}>
               가입하기
             </a>
           </p>

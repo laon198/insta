@@ -90,9 +90,7 @@ function Signup(props) {
         <div>
           <p className={Style.joinAsk}>
             계정이 있으신가요?
-            <a href="#" className={Style.joinLink}>
-              로그인
-            </a>
+            <Link to="/accounts/login">로그인</Link>
           </p>
         </div>
       </WhiteBox>
