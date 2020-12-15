@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4230d3cb-cc09-4d1a-ac35-21576a92d7dc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/PosListImg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/appstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/friend.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/instaicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/postlistimg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/postlisttop.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/profilemultiple.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppLayout.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GlobalStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomeLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomeLayout.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UseAsync.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/instagram/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/instagram/PostCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/instagram/PostCard.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/instagram/PostList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/instagram/SideBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/instagram/SideBar.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/instagram/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/instagram/Profile.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/accounts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/accounts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="5624874f-f5b5-439e-97d1-84baac3a50ac" />
+  <component name="ProjectId" id="1lgKkcxvazP9ScsednID65lkAkt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4230d3cb-cc09-4d1a-ac35-21576a92d7dc" name="Default Changelist" comment="" />
+      <created>1608013439271</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608013439271</updated>
+      <workItem from="1608013440473" duration="294000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
