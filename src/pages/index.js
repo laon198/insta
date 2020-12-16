@@ -9,11 +9,8 @@ import AppLayout from "../components/AppLayout";
 export default function Root() {
   return (
     <div>
-      <AppLayout>
-        <Route exact path="/" component={Home} />
-        <Route path="/profile" component={Profile} />
-      </AppLayout>
-
+      <Route exact path="/" component={Home} />
+      <Route path="/profile" component={Profile} />
       <Route path="/accounts" component={AccountRoute} />
     </div>
   );

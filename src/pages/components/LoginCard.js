@@ -36,7 +36,7 @@ function LoginCard() {
         } = response;
         dispatch(setToken(jwtToken));
         // setjwtToken(jwtToken);
-        history.push(loginRedirectUrl);
+        history.push("/");
       } catch (error) {
         console.error(error);
       }
