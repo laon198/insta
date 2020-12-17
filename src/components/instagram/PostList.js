@@ -3,6 +3,7 @@ import PostCard from "./PostCard.js";
 import styled from "styled-components";
 import axios from "axios";
 import useAsync from "../UseAsync.js";
+import { useAppContext } from "../../store.js";
 
 const Story = styled.div`
   border: 1px solid #bdbdbd;
@@ -11,13 +12,22 @@ const Story = styled.div`
   background: white;
 `;
 
-async function getPost() {
-  const response = await axios.get("http://192.168.0.8:8080/api/post/");
-
-  return response.data;
-}
-
 function PostList() {
+  const {
+    store: { jwtToken },
+    dispatch,
+  } = useAppContext();
+  const headers = { Authorization: `JWT ${jwtToken}` };
+  async function getPost() {
+    const response = await axios({
+      url: "http://192.168.0.8:8080/api/post/",
+      method: "get",
+      headers,
+    });
+
+    return response.data;
+  }
+
   const [state, refetch] = useAsync(getPost, []);
 
   const { loading, data: postlist, error } = state;

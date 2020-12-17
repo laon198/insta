@@ -1,12 +1,12 @@
 import React from "react";
 import Style from "../css/Iphone.module.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
-import Image1 from "../../assets/accounts/leftcont1.jpg";
-import Image2 from "../../assets/accounts/leftcont2.jpg";
-import Image3 from "../../assets/accounts/leftcont3.jpg";
-import Image4 from "../../assets/accounts/leftcont4.jpg";
-import Image5 from "../../assets/accounts/leftcont5.jpg";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+// import Image1 from "../../assets/accounts/leftcont1.jpg";
+// import Image2 from "../../assets/accounts/leftcont2.jpg";
+// import Image3 from "../../assets/accounts/leftcont3.jpg";
+// import Image4 from "../../assets/accounts/leftcont4.jpg";
+// import Image5 from "../../assets/accounts/leftcont5.jpg";
 
 function Iphone() {
   return (

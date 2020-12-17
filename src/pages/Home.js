@@ -10,9 +10,11 @@ import { Route } from "react-router-dom";
 export default function Home() {
   return (
     <div>
-      <HomeLayout SideBar={<SideBar />}>
-        <PostList />
-      </HomeLayout>
+      <AppLayout>
+        <HomeLayout SideBar={<SideBar />}>
+          <PostList />
+        </HomeLayout>
+      </AppLayout>
     </div>
   );
 }

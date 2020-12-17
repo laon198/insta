@@ -7,21 +7,28 @@ import useReducerWithSideEffects, {
 const AppContext = createContext();
 
 const reducer = (prevState, action) => {
-  const { type } = action;
+  const { type, payload } = action;
   if (type === SET_TOKEN) {
-    const { payload: jwtToken } = action;
-    const newState = { ...prevState, jwtToken, isAuthenticated: true };
+    const newState = {
+      ...prevState,
+      jwtToken: payload.token,
+      isAuthenticated: true,
+      username: payload.username,
+    };
     return UpdateWithSideEffect(newState, (state, dispatch) => {
-      setStorageItem("jwtToken", jwtToken);
+      setStorageItem("jwtToken", payload.token);
+      setStorageItem("username", payload.username);
     });
   } else if (type === DELETE_TOKEN) {
     const newState = {
       ...prevState,
       jwtToken: "",
       isAuthenticated: false,
+      username: "",
     };
     return UpdateWithSideEffect(newState, (state, dispatch) => {
       setStorageItem("jwtToken", "");
+      setStorageItem("username", "");
     });
   }
 
@@ -30,8 +37,11 @@ const reducer = (prevState, action) => {
 
 export const AppProvider = ({ children }) => {
   const jwtToken = getStorageItem("jwtToken", "");
+  const username = getStorageItem("username", "");
   const [store, dispatch] = useReducerWithSideEffects(reducer, {
+    jwtToken: jwtToken,
     isAuthenticated: jwtToken.length > 0,
+    username: username,
   });
   return (
     <AppContext.Provider value={{ store, dispatch }}>
@@ -47,5 +57,11 @@ const SET_TOKEN = "APP/SET_TOKEN";
 const DELETE_TOKEN = "APP/DELETE_TOKEN";
 
 //Action Creators
-export const setToken = (token) => ({ type: SET_TOKEN, payload: token });
+export const setToken = (token, username) => ({
+  type: SET_TOKEN,
+  payload: {
+    token: token,
+    username: username,
+  },
+});
 export const deleteToken = () => ({ type: DELETE_TOKEN });
