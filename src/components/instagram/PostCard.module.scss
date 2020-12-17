@@ -1,5 +1,5 @@
 .postcard{
-	width:63%;
+	width:96%;
 	margin-top: 33px;
 	
 	a{
@@ -52,6 +52,7 @@
 		.posticon{
 			display:flex;
 			padding:7px 14px 6px 14px;
+			cursor:pointer;
 			.posticon_left{
 				font-size: 24px;
 				display:inline-flex;
@@ -121,12 +122,13 @@
 			width: 100%;
 			height: 58px;
 			input{
+				height:100%;
 				clear:none;
 				float:none;
 				box-sizing:border-box;
 				border:0px none;
 				border-top: 1px solid #dbdbdb;
-				padding:0 0 0 10px;
+				// padding:0 0 0 10px;
 			}
 			input:focus{
 				outline:none;
@@ -135,7 +137,7 @@
 				font-size: 15px;
 			}
 			.comment_input{
-				flex-grow:9;
+				flex-grow:10;
 			}
 			.comment_submit{
 				flex-grow:1;
