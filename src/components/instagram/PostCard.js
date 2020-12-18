@@ -4,6 +4,8 @@ import { BsHeart, BsFillHeartFill, BsChat, BsBookmark } from "react-icons/bs";
 import { MdShare, MdAccountCircle } from "react-icons/md";
 import Axios from "axios";
 import useAxios from "axios-hooks";
+import Comment from "./Comment";
+import { Link } from "react-router-dom";
 
 function PostCard({ post, refetch, headers }) {
   const { id, author, caption, photo, is_like, how_like, created_at } = post;
@@ -33,7 +35,6 @@ function PostCard({ post, refetch, headers }) {
               data: { is_like: is_like, how_like: how_like },
             } = response;
             setLike({ is_like: is_like, how_like: how_like });
-            refetch();
           })
           .catch((error) => {
             console.log(error);
@@ -98,10 +99,22 @@ function PostCard({ post, refetch, headers }) {
             </a>
             <p className={styles.caption}> {caption}</p>
           </div>
-          <a className={styles.com_more} href="#">
+          <Link to="/all" className={styles.com_more}>
             댓글 {commentList ? commentList.length : 0}개 모두 보기
-            {commentList && commentList.map((comment, index) => {})}
-          </a>
+          </Link>
+          {commentList &&
+            commentList.map((comment, index) =>
+              index < 2 ? (
+                <Comment
+                  postId={id}
+                  comment={comment}
+                  headers={headers}
+                  key={comment.id}
+                  refetch={commentRefetch}
+                />
+              ) : null
+            )}
+
           {/* {/* <a className={styles.com_writer} href="#">
             iguegumwang
           </a> */}
