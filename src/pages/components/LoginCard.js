@@ -31,11 +31,14 @@ function LoginCard() {
           "http://192.168.0.8:8080/accounts/login/",
           data
         );
+
         const {
-          data: { token: jwtToken },
-        } = response;
-        dispatch(setToken(jwtToken));
+          token,
+          user: { username },
+        } = response.data;
+        dispatch(setToken(token, username));
         // setjwtToken(jwtToken);
+        console.log("response :", response);
         history.push("/");
       } catch (error) {
         console.error(error);
