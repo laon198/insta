@@ -6,6 +6,7 @@ import Axios from "axios";
 import useAxios from "axios-hooks";
 import Comment from "./Comment";
 import { Link } from "react-router-dom";
+import CommentForm from "./CommentForm";
 
 function PostCard({ post, refetch, headers }) {
   const { id, author, caption, photo, is_like, how_like, created_at } = post;
@@ -123,14 +124,9 @@ function PostCard({ post, refetch, headers }) {
             {created_at}
           </a>
         </div>
-        <form className={styles.input}>
-          <input
-            className={styles.comment_input}
-            type="text"
-            placeholder="댓글 달기..."
-          />
-          <input className={styles.comment_submit} value="게시" type="submit" />
-        </form>
+        <div className={styles.inputForm}>
+          <CommentForm postId={id} headers={headers} refetch={commentRefetch} />
+        </div>
       </div>
       {/* <!-- // list --> */}
     </div>

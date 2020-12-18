@@ -7,6 +7,9 @@
 	}
   
   .SideBar{
+		position: fixed;
+		right:25%;
 		grid-area:side;
+		
   }
 }

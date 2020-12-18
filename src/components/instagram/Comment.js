@@ -33,12 +33,12 @@ function Comment({ postId, comment, headers, refetch }) {
         {is_like == true ? (
           <HeartFilled
             style={{ fontSize: "14px", color: "red", cursor: "pointer" }}
-            onClcik={handleLike}
+            onClick={handleLike}
           />
         ) : (
           <HeartOutlined
             style={{ fontSize: "14px", cursor: "pointer" }}
-            onClcik={handleLike}
+            onClick={handleLike}
           />
         )}
       </div>
