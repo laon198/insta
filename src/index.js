@@ -5,6 +5,7 @@ import { AppProvider } from "./store";
 import Root from "./pages/index";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import "./components/GlobalStyle.css";
 
 ReactDOM.render(
   <BrowserRouter>

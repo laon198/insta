@@ -1,11 +1,12 @@
 .profile{
-	margin-top:3%;
+	
 	.header{
+		padding:4% 0;
 		display:flex;
 		.profileimg{
 			flex-grow:0.7;
 			text-align: center;
-			margin-right: 30px;
+			margin-right: 5%;
 			img{
 				width: 150px;
 				border-radius:50%;
@@ -17,10 +18,12 @@
 			.top{
 				display:flex;
 				margin-bottom: 20px;
+				padding-top: 5px;
 				h2{
 					font-size: 28px;
 					font-weight: 100;
 					margin-right: 20px;
+					
 				}
 				.edit{
 					font-size: 14px;
@@ -37,6 +40,7 @@
 				}
 			}
 			.mid{
+				margin-bottom: 25px;
 				li{
 					display: inline-block;
 					font-size: 17px;
@@ -44,9 +48,32 @@
 				}
 			}
 			.bottom{
-
+				font-size: 16px;
+				font-weight: bold;
 			}
 		}
+	}
+	.posts{
+		border-top:1px solid #dbdbdb;
+		.postsTitle{
+			display: flex;
+			justify-content: center;
+			height: 50px;
+			line-height: 50px;
+		}
+		.postMenu{
+			
+			font-weight: bold;
+			font-size: 13px;
+			margin: 0 30px;
+			
+			.postMenuLink{
+				color:gray;
+			}
+		}
+		
+		
+		
 	}
 
 

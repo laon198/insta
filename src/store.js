@@ -30,9 +30,9 @@ const reducer = (prevState, action) => {
       setStorageItem("jwtToken", "");
       setStorageItem("username", "");
     });
+  } else {
+    return prevState;
   }
-
-  return prevState;
 };
 
 export const AppProvider = ({ children }) => {

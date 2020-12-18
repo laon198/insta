@@ -1,28 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SideBar.module.scss";
 import profile from "../../assets/profile.jpg";
 import friend from "../../assets/friend.jpg";
-
-// async function getPost() {
-//   const response = await axios.get(
-//     `http://192.168.0.8:8080/accounts/${usersname}/`
-//   );
-
-//   return response.data;
-// }
+import axios from "axios";
+import { useAppContext } from "../../store";
+import { useEffect } from "react";
 
 function SideBar() {
+  const {
+    store: { jwtToken, username },
+  } = useAppContext();
+  const headers = { Authorization: `JWT ${jwtToken}` };
+  const [userInfo, setUserInfo] = useState({});
+
+  useEffect(() => {
+    axios({
+      url: `http://192.168.0.8:8080/accounts/${username}/`,
+      method: "GET",
+      headers,
+    })
+      .then((response) => {
+        setUserInfo({
+          ...response.data,
+        });
+        console.log(userInfo);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div className={styles.sidebar}>
       <div className={styles.myprofile}>
         <div>
           <a href="#" className={styles.myprofimg}>
-            <img src={profile} alt="나의프로필" />
+            <img
+              src={userInfo.avatar ? userInfo.avatar : profile}
+              alt="나의프로필"
+            />
           </a>
         </div>
         <div className={styles.myprofname}>
           <a className={styles.myprofname_a} href="#">
-            hyeon2345
+            {userInfo.username}
           </a>
           <p className={styles.myname}>김현석</p>
         </div>

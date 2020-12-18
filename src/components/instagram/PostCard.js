@@ -1,14 +1,48 @@
 import React, { useState } from "react";
 import styles from "./PostCard.module.scss";
-import { BsHeart, BsChat, BsBookmark } from "react-icons/bs";
+import { BsHeart, BsFillHeartFill, BsChat, BsBookmark } from "react-icons/bs";
 import { MdShare, MdAccountCircle } from "react-icons/md";
+import Axios from "axios";
+import useAxios from "axios-hooks";
 
-function PostCard({ post, refetch, key }) {
+function PostCard({ post, refetch, headers }) {
   const { id, author, caption, photo, is_like, how_like, created_at } = post;
   const { username, avatar } = author;
   const [like, setLike] = useState({ is_like: is_like, how_like: how_like });
 
-  const onToggle = () => setLike({ is_like: !is_like, how_like: how_like + 1 });
+  const [{ data: commentList, error, loading }, commentRefetch] = useAxios({
+    url: `http://192.168.0.8:8080/api/post/${id}/comment/`,
+    headers,
+  });
+
+  const handlelike = () => {
+    const method = like.is_like === true ? "delete" : "post";
+    Axios({
+      url: `http://192.168.0.8:8080/api/post/${id}/like/`,
+      method: method,
+      headers,
+    })
+      .then((response) => {
+        Axios({
+          url: `http://192.168.0.8:8080/api/post/${id}/`,
+          method: "get",
+          headers,
+        })
+          .then((response) => {
+            const {
+              data: { is_like: is_like, how_like: how_like },
+            } = response;
+            setLike({ is_like: is_like, how_like: how_like });
+            refetch();
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className={styles.postcard}>
@@ -34,9 +68,11 @@ function PostCard({ post, refetch, key }) {
 
         <div className={styles.posticon}>
           <div className={styles.posticon_left}>
-            <a href="#">
-              <BsHeart />
-            </a>
+            {like.is_like === true ? (
+              <BsFillHeartFill style={{ color: "red" }} onClick={handlelike} />
+            ) : (
+              <BsHeart onClick={handlelike} />
+            )}
             <a href="#">
               <BsChat />
             </a>
@@ -54,7 +90,7 @@ function PostCard({ post, refetch, key }) {
 
         <div className={styles.comment}>
           <a className={styles.likenum} href="#">
-            좋아요 192,731개
+            좋아요 {like.how_like}개
           </a>
           <div className={styles.mycaption}>
             <a className={styles.nickname} href="#">
@@ -63,12 +99,13 @@ function PostCard({ post, refetch, key }) {
             <p className={styles.caption}> {caption}</p>
           </div>
           <a className={styles.com_more} href="#">
-            댓글 212개 모두 보기
+            댓글 {commentList ? commentList.length : 0}개 모두 보기
+            {commentList && commentList.map((comment, index) => {})}
           </a>
-          <a className={styles.com_writer} href="#">
+          {/* {/* <a className={styles.com_writer} href="#">
             iguegumwang
-          </a>
-          <p className={styles.ptag}>유트브 볼 때마다 감탄 ㅠ</p>
+          </a> */}
+          {/* <p className={styles.ptag}>유트브 볼 때마다 감탄 ㅠ</p> */}
           <a className={styles.date} href="#">
             {created_at}
           </a>

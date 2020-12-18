@@ -4,6 +4,14 @@ import styles from "./Profile.module.scss";
 import profile from "../../assets/profile.jpg";
 import { Route, Link } from "react-router-dom";
 import { MdSettings } from "react-icons/md";
+import {
+  ContactsOutlined,
+  ReadOutlined,
+  TableOutlined,
+  UserOutlined,
+  VideoCameraOutlined,
+} from "@ant-design/icons";
+import { BsBookmark } from "react-icons/bs";
 
 function Profile() {
   return (
@@ -30,13 +38,39 @@ function Profile() {
           <div className={styles.bottom}>김현석</div>
         </div>
       </div>
-      <div className={styles.contents}>
-        <ul>
-          <li>게시물</li>
-          <li>IGTV</li>
-          <li>저장됨</li>
-          <li>태그됨</li>
-        </ul>
+      {/* <!-- //header --> */}
+      <div className={styles.posts}>
+        <div className={styles.postsTitle}>
+          <div className={styles.postMenu}>
+            <Link to="/profile">
+              <div className={styles.postMenuLink}>
+                <TableOutlined /> <span>게시물</span>
+              </div>
+            </Link>
+          </div>
+          <div className={styles.postMenu}>
+            <Link to="/profile/channel">
+              <div className={styles.postMenuLink}>
+                <VideoCameraOutlined /> <span>IGTV</span>
+              </div>
+            </Link>
+          </div>
+
+          <div className={styles.postMenu}>
+            <Link to="/profile/saved">
+              <div className={styles.postMenuLink}>
+                <BsBookmark /> <span>저장됨</span>
+              </div>
+            </Link>
+          </div>
+          <div className={styles.postMenu}>
+            <Link to="/profile/tagged">
+              <div className={styles.postMenuLink}>
+                <ContactsOutlined /> <span>태그됨</span>
+              </div>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
